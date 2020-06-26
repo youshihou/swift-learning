@@ -434,7 +434,6 @@ fileprivate class MountainsController {
         let height: Int
         
         let identifier = UUID()
-        
         func hash(into hasher: inout Hasher) {
             hasher.combine(identifier)
         }
