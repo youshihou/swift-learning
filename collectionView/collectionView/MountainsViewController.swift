@@ -438,10 +438,10 @@ fileprivate class MountainsController {
         func hash(into hasher: inout Hasher) {
             hasher.combine(identifier)
         }
-    
         static func == (lhs: Mountain, rhs: Mountain) -> Bool {
             lhs.identifier == rhs.identifier
         }
+        
         func contains(_ filter: String?) -> Bool {
             guard let filterText = filter else { return true }
             if filterText.isEmpty { return true }
@@ -463,7 +463,6 @@ fileprivate class MountainsController {
     private lazy var mountains: [Mountain] = {
         generateMountains()
     }()
-    
     private func generateMountains() -> [Mountain] {
         let components = mountainsRawData.components(separatedBy: CharacterSet.newlines)
         var mountains = [Mountain]()
@@ -485,10 +484,9 @@ fileprivate class MountainsController {
 
 
 class MountainsViewController: UIViewController {
-    enum Section: CaseIterable {
+    private enum Section: CaseIterable {
         case main
     }
-
     private let mountainsController = MountainsController()
     private let searchBar = UISearchBar(frame: .zero)
     private var collectionView: UICollectionView!
@@ -500,14 +498,35 @@ class MountainsViewController: UIViewController {
         super.viewDidLoad()
 
         navigationItem.title = "Mountains Search"
+        view.backgroundColor = .systemBackground
+
         configureView()
         configureDataSource()
         performQuery(with: nil)
     }
 
-    private func configureView() {
-        view.backgroundColor = .systemBackground
+    private func createLayout() -> UICollectionViewLayout {
+        let layout = UICollectionViewCompositionalLayout { (sectionIndex: Int, layoutEnvironment: NSCollectionLayoutEnvironment) -> NSCollectionLayoutSection? in
+            let contentSize = layoutEnvironment.container.effectiveContentSize
+            let columns = contentSize.width > 800 ? 3 : 2
+            let spacing: CGFloat = 10
+            let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .fractionalHeight(1.0))
+            let item = NSCollectionLayoutItem(layoutSize: itemSize)
+            let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .absolute(32))
+            let group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize, subitem: item, count: columns)
+            group.interItemSpacing = .fixed(spacing)
+            
+            let section = NSCollectionLayoutSection(group: group)
+            section.interGroupSpacing = spacing
+            section.contentInsets = NSDirectionalEdgeInsets(top: 10, leading: 10, bottom: 10, trailing: 10)
+            
+            return section
+        }
         
+        return layout
+    }
+
+    private func configureView() {
         let layout = createLayout()
         let collectionView = UICollectionView(frame: view.bounds, collectionViewLayout: layout)
         collectionView.translatesAutoresizingMaskIntoConstraints = false
@@ -528,26 +547,6 @@ class MountainsViewController: UIViewController {
         
         self.collectionView = collectionView
         searchBar.delegate = self
-    }
-    private func createLayout() -> UICollectionViewLayout {
-        let layout = UICollectionViewCompositionalLayout { (sectionIndex: Int, layoutEnvironment: NSCollectionLayoutEnvironment) -> NSCollectionLayoutSection? in
-            let contentSize = layoutEnvironment.container.effectiveContentSize
-            let columns = contentSize.width > 800 ? 3 : 2
-            let spacing: CGFloat = 10
-            let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .fractionalHeight(1.0))
-            let item = NSCollectionLayoutItem(layoutSize: itemSize)
-            let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .absolute(32))
-            let group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize, subitem: item, count: columns)
-            group.interItemSpacing = .fixed(spacing)
-            
-            let section = NSCollectionLayoutSection(group: group)
-            section.interGroupSpacing = spacing
-            section.contentInsets = NSDirectionalEdgeInsets(top: 10, leading: 10, bottom: 10, trailing: 10)
-            
-            return section
-        }
-        
-        return layout
     }
     
     private func configureDataSource() {
