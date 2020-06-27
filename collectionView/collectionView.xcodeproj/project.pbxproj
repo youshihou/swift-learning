@@ -24,6 +24,7 @@
 		035FACFB24A759AD00456191 /* ItemBadgeSupplementaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 035FACFA24A759AD00456191 /* ItemBadgeSupplementaryViewController.swift */; };
 		035FACFD24A76CF700456191 /* SectionHeadersFootersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 035FACFC24A76CF700456191 /* SectionHeadersFootersViewController.swift */; };
 		035FACFF24A779F900456191 /* PinnedSectionHeaderFooterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 035FACFE24A779F900456191 /* PinnedSectionHeaderFooterViewController.swift */; };
+		035FAD0124A77FD900456191 /* SectionDecorationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 035FAD0024A77FD900456191 /* SectionDecorationViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +47,7 @@
 		035FACFA24A759AD00456191 /* ItemBadgeSupplementaryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemBadgeSupplementaryViewController.swift; sourceTree = "<group>"; };
 		035FACFC24A76CF700456191 /* SectionHeadersFootersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionHeadersFootersViewController.swift; sourceTree = "<group>"; };
 		035FACFE24A779F900456191 /* PinnedSectionHeaderFooterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinnedSectionHeaderFooterViewController.swift; sourceTree = "<group>"; };
+		035FAD0024A77FD900456191 /* SectionDecorationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionDecorationViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,14 +82,7 @@
 			children = (
 				035FACD024A4DB4500456191 /* AppDelegate.swift */,
 				035FACD224A4DB4500456191 /* SceneDelegate.swift */,
-				035FACF024A7021300456191 /* GridViewController.swift */,
-				035FACF224A70D8300456191 /* InsetItemsGridViewController.swift */,
-				035FACF424A7114B00456191 /* TwoColumnViewController.swift */,
-				035FACF624A716DF00456191 /* DistinctSectionsViewController.swift */,
-				035FACF824A71F0600456191 /* AdaptiveSectionsViewController.swift */,
-				035FACFA24A759AD00456191 /* ItemBadgeSupplementaryViewController.swift */,
-				035FACFC24A76CF700456191 /* SectionHeadersFootersViewController.swift */,
-				035FACFE24A779F900456191 /* PinnedSectionHeaderFooterViewController.swift */,
+				035FAD0524A7801400456191 /* Layout */,
 				035FACEF24A6EDF200456191 /* Lists */,
 				035FACEA24A6EB8C00456191 /* Diffable */,
 				035FACD624A4DB4500456191 /* Main.storyboard */,
@@ -114,6 +109,22 @@
 				035FACEB24A6EDD500456191 /* SimpleListViewController.swift */,
 			);
 			name = Lists;
+			sourceTree = "<group>";
+		};
+		035FAD0524A7801400456191 /* Layout */ = {
+			isa = PBXGroup;
+			children = (
+				035FACF024A7021300456191 /* GridViewController.swift */,
+				035FACF224A70D8300456191 /* InsetItemsGridViewController.swift */,
+				035FACF424A7114B00456191 /* TwoColumnViewController.swift */,
+				035FACF624A716DF00456191 /* DistinctSectionsViewController.swift */,
+				035FACF824A71F0600456191 /* AdaptiveSectionsViewController.swift */,
+				035FACFA24A759AD00456191 /* ItemBadgeSupplementaryViewController.swift */,
+				035FACFC24A76CF700456191 /* SectionHeadersFootersViewController.swift */,
+				035FACFE24A779F900456191 /* PinnedSectionHeaderFooterViewController.swift */,
+				035FAD0024A77FD900456191 /* SectionDecorationViewController.swift */,
+			);
+			name = Layout;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -200,6 +211,7 @@
 				035FACD124A4DB4500456191 /* AppDelegate.swift in Sources */,
 				035FACD324A4DB4500456191 /* SceneDelegate.swift in Sources */,
 				035FACFF24A779F900456191 /* PinnedSectionHeaderFooterViewController.swift in Sources */,
+				035FAD0124A77FD900456191 /* SectionDecorationViewController.swift in Sources */,
 				035FACFB24A759AD00456191 /* ItemBadgeSupplementaryViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -498,7 +498,7 @@ class MountainsViewController: UIViewController {
 
         navigationItem.title = "Mountains Search"
         
-        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Pinned Section Headers", style: .plain, target: self, action: #selector(pushNextPage))
+        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Section Decoration", style: .plain, target: self, action: #selector(pushNextPage))
 
         configureView()
         configureDataSource()
@@ -506,7 +506,7 @@ class MountainsViewController: UIViewController {
     }
     
     @objc private func pushNextPage() {
-        let vc = PinnedSectionHeaderFooterViewController()
+        let vc = SectionDecorationViewController()
         navigationController?.pushViewController(vc, animated: true)
     }
 
