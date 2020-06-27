@@ -21,6 +21,7 @@
 		035FACF524A7114B00456191 /* TwoColumnViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 035FACF424A7114B00456191 /* TwoColumnViewController.swift */; };
 		035FACF724A716DF00456191 /* DistinctSectionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 035FACF624A716DF00456191 /* DistinctSectionsViewController.swift */; };
 		035FACF924A71F0600456191 /* AdaptiveSectionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 035FACF824A71F0600456191 /* AdaptiveSectionsViewController.swift */; };
+		035FACFB24A759AD00456191 /* ItemBadgeSupplementaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 035FACFA24A759AD00456191 /* ItemBadgeSupplementaryViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +41,7 @@
 		035FACF424A7114B00456191 /* TwoColumnViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwoColumnViewController.swift; sourceTree = "<group>"; };
 		035FACF624A716DF00456191 /* DistinctSectionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DistinctSectionsViewController.swift; sourceTree = "<group>"; };
 		035FACF824A71F0600456191 /* AdaptiveSectionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdaptiveSectionsViewController.swift; sourceTree = "<group>"; };
+		035FACFA24A759AD00456191 /* ItemBadgeSupplementaryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemBadgeSupplementaryViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +81,7 @@
 				035FACF424A7114B00456191 /* TwoColumnViewController.swift */,
 				035FACF624A716DF00456191 /* DistinctSectionsViewController.swift */,
 				035FACF824A71F0600456191 /* AdaptiveSectionsViewController.swift */,
+				035FACFA24A759AD00456191 /* ItemBadgeSupplementaryViewController.swift */,
 				035FACEF24A6EDF200456191 /* Lists */,
 				035FACEA24A6EB8C00456191 /* Diffable */,
 				035FACD624A4DB4500456191 /* Main.storyboard */,
@@ -189,6 +192,7 @@
 				035FACE524A4DDA900456191 /* MountainsViewController.swift in Sources */,
 				035FACD124A4DB4500456191 /* AppDelegate.swift in Sources */,
 				035FACD324A4DB4500456191 /* SceneDelegate.swift in Sources */,
+				035FACFB24A759AD00456191 /* ItemBadgeSupplementaryViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -498,7 +498,7 @@ class MountainsViewController: UIViewController {
 
         navigationItem.title = "Mountains Search"
         
-        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Adaptive Sections", style: .plain, target: self, action: #selector(pushNextPage))
+        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Item Badges", style: .plain, target: self, action: #selector(pushNextPage))
 
         configureView()
         configureDataSource()
@@ -506,7 +506,7 @@ class MountainsViewController: UIViewController {
     }
     
     @objc private func pushNextPage() {
-        let vc = AdaptiveSectionsViewController()
+        let vc = ItemBadgeSupplementaryViewController()
         navigationController?.pushViewController(vc, animated: true)
     }
 
