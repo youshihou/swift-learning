@@ -23,6 +23,7 @@
 		035FACF924A71F0600456191 /* AdaptiveSectionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 035FACF824A71F0600456191 /* AdaptiveSectionsViewController.swift */; };
 		035FACFB24A759AD00456191 /* ItemBadgeSupplementaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 035FACFA24A759AD00456191 /* ItemBadgeSupplementaryViewController.swift */; };
 		035FACFD24A76CF700456191 /* SectionHeadersFootersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 035FACFC24A76CF700456191 /* SectionHeadersFootersViewController.swift */; };
+		035FACFF24A779F900456191 /* PinnedSectionHeaderFooterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 035FACFE24A779F900456191 /* PinnedSectionHeaderFooterViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +45,7 @@
 		035FACF824A71F0600456191 /* AdaptiveSectionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdaptiveSectionsViewController.swift; sourceTree = "<group>"; };
 		035FACFA24A759AD00456191 /* ItemBadgeSupplementaryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemBadgeSupplementaryViewController.swift; sourceTree = "<group>"; };
 		035FACFC24A76CF700456191 /* SectionHeadersFootersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionHeadersFootersViewController.swift; sourceTree = "<group>"; };
+		035FACFE24A779F900456191 /* PinnedSectionHeaderFooterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinnedSectionHeaderFooterViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +87,7 @@
 				035FACF824A71F0600456191 /* AdaptiveSectionsViewController.swift */,
 				035FACFA24A759AD00456191 /* ItemBadgeSupplementaryViewController.swift */,
 				035FACFC24A76CF700456191 /* SectionHeadersFootersViewController.swift */,
+				035FACFE24A779F900456191 /* PinnedSectionHeaderFooterViewController.swift */,
 				035FACEF24A6EDF200456191 /* Lists */,
 				035FACEA24A6EB8C00456191 /* Diffable */,
 				035FACD624A4DB4500456191 /* Main.storyboard */,
@@ -196,6 +199,7 @@
 				035FACFD24A76CF700456191 /* SectionHeadersFootersViewController.swift in Sources */,
 				035FACD124A4DB4500456191 /* AppDelegate.swift in Sources */,
 				035FACD324A4DB4500456191 /* SceneDelegate.swift in Sources */,
+				035FACFF24A779F900456191 /* PinnedSectionHeaderFooterViewController.swift in Sources */,
 				035FACFB24A759AD00456191 /* ItemBadgeSupplementaryViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
