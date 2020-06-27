@@ -14,6 +14,7 @@
 		035FACDD24A4DB4700456191 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 035FACDB24A4DB4700456191 /* LaunchScreen.storyboard */; };
 		035FACE524A4DDA900456191 /* MountainsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 035FACE424A4DDA900456191 /* MountainsViewController.swift */; };
 		035FACE724A626E500456191 /* WiFiSettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 035FACE624A626E500456191 /* WiFiSettingsViewController.swift */; };
+		035FACE924A6488800456191 /* InsertionSortViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 035FACE824A6488800456191 /* InsertionSortViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		035FACDE24A4DB4700456191 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		035FACE424A4DDA900456191 /* MountainsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MountainsViewController.swift; sourceTree = "<group>"; };
 		035FACE624A626E500456191 /* WiFiSettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WiFiSettingsViewController.swift; sourceTree = "<group>"; };
+		035FACE824A6488800456191 /* InsertionSortViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InsertionSortViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +64,7 @@
 				035FACD224A4DB4500456191 /* SceneDelegate.swift */,
 				035FACE424A4DDA900456191 /* MountainsViewController.swift */,
 				035FACE624A626E500456191 /* WiFiSettingsViewController.swift */,
+				035FACE824A6488800456191 /* InsertionSortViewController.swift */,
 				035FACD624A4DB4500456191 /* Main.storyboard */,
 				035FACD924A4DB4700456191 /* Assets.xcassets */,
 				035FACDB24A4DB4700456191 /* LaunchScreen.storyboard */,
@@ -141,6 +144,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				035FACE924A6488800456191 /* InsertionSortViewController.swift in Sources */,
 				035FACE724A626E500456191 /* WiFiSettingsViewController.swift in Sources */,
 				035FACE524A4DDA900456191 /* MountainsViewController.swift in Sources */,
 				035FACD124A4DB4500456191 /* AppDelegate.swift in Sources */,

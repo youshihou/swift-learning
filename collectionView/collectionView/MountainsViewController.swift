@@ -499,14 +499,14 @@ class MountainsViewController: UIViewController {
         navigationItem.title = "Mountains Search"
         view.backgroundColor = .systemBackground
         
-        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "WiFi", style: .plain, target: self, action: #selector(pushWiFiPage))
+        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "WiFi", style: .plain, target: self, action: #selector(pushNextPage))
 
         configureView()
         configureDataSource()
         performQuery(with: nil)
     }
     
-    @objc private func pushWiFiPage() {
+    @objc private func pushNextPage() {
         let vc = WiFiSettingsViewController()
         navigationController?.pushViewController(vc, animated: true)
     }

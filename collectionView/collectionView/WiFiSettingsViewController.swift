@@ -187,6 +187,13 @@ class WiFiSettingsViewController: UIViewController {
         configureView()
         configureDataSource()
         updateUI(animated: false)
+        
+        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Insertion Sort", style: .plain, target: self, action: #selector(pushNextPage))
+    }
+    
+    @objc private func pushNextPage() {
+        let vc = InsertionSortViewController()
+        navigationController?.pushViewController(vc, animated: true)
     }
     
     private func configureView() {

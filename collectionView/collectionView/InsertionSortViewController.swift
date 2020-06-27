@@ -1,5 +1,5 @@
 //
-//  InsettionSortViewController.swift
+//  InsertionSortViewController.swift
 //  collectionView
 //
 //  Created by Ankui on 6/26/20.
@@ -49,7 +49,7 @@ class InsertionSortArray: Hashable {
         
         var index = currentIndex
         let currentNode = nodes[index]
-        index = -1
+        index -= 1
         while index >= 0 && currentNode.value < nodes[index].value {
             let tmp = nodes[index]
             nodes[index] = currentNode
@@ -93,7 +93,124 @@ class InsertionSortViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        navigationItem.title = "Insertation"
+        navigationItem.title = "Insertion Sort Visualizer"
+        
+        congigureView()
+        congigureDataSource()
+        congigureNavItem()
+    }
+    
+    override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
+        super.viewWillTransition(to: size, with: coordinator)
+        
+        if dataSource != nil {
+            let bounds = collectionView.bounds
+            let snapshot = randomizedSnapshot(for: bounds)
+            dataSource.apply(snapshot)
+        }
+    }
+    
+    private func createLayout() -> UICollectionViewLayout {
+        let layout = UICollectionViewCompositionalLayout { (sectionIndex: Int, layoutEnvironment: NSCollectionLayoutEnvironment) -> NSCollectionLayoutSection? in
+            let contentSize = layoutEnvironment.container.effectiveContentSize
+            let columns = Int(contentSize.width / InsertionSortViewController.nodeSize.width)
+            let rowHeight = InsertionSortViewController.nodeSize.height
+            let size = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .fractionalHeight(1.0))
+            let item = NSCollectionLayoutItem(layoutSize: size)
+            let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .absolute(rowHeight))
+            let group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize, subitem: item, count: columns)
+            let section = NSCollectionLayoutSection(group: group)
+            return section
+        }
+        return layout
+    }
+    
+    private func congigureView() {
+        collectionView = UICollectionView(frame: view.bounds, collectionViewLayout: createLayout())
+        collectionView.backgroundColor = .black
+        collectionView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+        collectionView.register(UICollectionViewCell.self, forCellWithReuseIdentifier: InsertionSortViewController.resuseIdentifier)
+        view.addSubview(collectionView)
+    }
+    
+    private func congigureDataSource() {
+        dataSource = UICollectionViewDiffableDataSource<InsertionSortArray, InsertionSortArray.SortNode>(collectionView: collectionView) {
+            (collectionView: UICollectionView, indexPath: IndexPath, node: InsertionSortArray.SortNode) -> UICollectionViewCell? in
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: InsertionSortViewController.resuseIdentifier, for: indexPath)
+            cell.backgroundColor = node.color
+            return cell
+        }
+        
+        let bounds = collectionView.bounds
+        let snapshot = randomizedSnapshot(for: bounds)
+        dataSource.apply(snapshot)
     }
 
+    private func congigureNavItem() {
+        navigationItem.rightBarButtonItem = UIBarButtonItem(title: isSorting ? "Stop" : "Sort", style: .plain, target: self, action: #selector(toggleSort))
+    }
+    @objc private func toggleSort() {
+        isSorting.toggle()
+        if isSorting {
+            performSortStep()
+        }
+        congigureNavItem()
+    }
+    private func performSortStep() {
+        if !isSorting { return }
+        
+        var sectionCountNeedingSort = 0
+        
+        // get the current state of the UI from the data source.
+        var updatedSnapshot = dataSource.snapshot()
+        
+        // for each section, if neeed, step through and perform the next sorting step.
+        updatedSnapshot.sectionIdentifiers.forEach {
+            let section = $0
+            if !section.isSorted {
+                // step the sort algorithm
+                section.sortNext()
+                let items = section.values
+                // replace the items for this section with the newly sorted items.
+                updatedSnapshot.deleteItems(items)
+                updatedSnapshot.appendItems(items, toSection: section)
+                
+                sectionCountNeedingSort += 1
+            }
+        }
+        
+        var shouldRest = false
+        var delay = 125
+        if sectionCountNeedingSort > 0 {
+            dataSource.apply(updatedSnapshot)
+        } else {
+            delay = 1000
+            shouldRest = true
+        }
+        let bounds = collectionView.bounds
+        DispatchQueue.main.asyncAfter(deadline: .now() + .milliseconds(delay)) {
+            if shouldRest {
+                let snapshot = self.randomizedSnapshot(for: bounds)
+                self.dataSource.apply(snapshot, animatingDifferences: false)
+            }
+            self.performSortStep()
+        }
+    }
+    private func randomizedSnapshot(for bounds: CGRect) -> NSDiffableDataSourceSnapshot<InsertionSortArray, InsertionSortArray.SortNode> {
+        var snapshot = NSDiffableDataSourceSnapshot<InsertionSortArray, InsertionSortArray.SortNode>()
+        let rowCount = rows(for: bounds)
+        let columnCout = columns(for: bounds)
+        for _ in 0..<rowCount {
+            let section = InsertionSortArray(count: columnCout)
+            snapshot.appendSections([section])
+            snapshot.appendItems(section.values)
+        }
+        return snapshot
+    }
+    private func rows(for bounds: CGRect) -> Int {
+        Int(bounds.height / InsertionSortViewController.nodeSize.height)
+    }
+    private func columns(for bounds: CGRect) -> Int {
+        Int(bounds.width / InsertionSortViewController.nodeSize.width)
+    }
 }
