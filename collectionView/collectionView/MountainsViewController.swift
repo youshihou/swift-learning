@@ -499,7 +499,7 @@ class MountainsViewController: UIViewController {
         navigationItem.title = "Mountains Search"
         view.backgroundColor = .systemBackground
         
-        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "List", style: .plain, target: self, action: #selector(pushNextPage))
+        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Grid", style: .plain, target: self, action: #selector(pushNextPage))
 
         configureView()
         configureDataSource()
@@ -507,7 +507,7 @@ class MountainsViewController: UIViewController {
     }
     
     @objc private func pushNextPage() {
-        let vc = SimpleListViewController()
+        let vc = GridViewController()
         navigationController?.pushViewController(vc, animated: true)
     }
 
