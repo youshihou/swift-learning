@@ -17,6 +17,7 @@
 		035FACE924A6488800456191 /* InsertionSortViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 035FACE824A6488800456191 /* InsertionSortViewController.swift */; };
 		035FACEC24A6EDD500456191 /* SimpleListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 035FACEB24A6EDD500456191 /* SimpleListViewController.swift */; };
 		035FACF124A7021300456191 /* GridViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 035FACF024A7021300456191 /* GridViewController.swift */; };
+		035FACF324A70D8300456191 /* InsetItemsGridViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 035FACF224A70D8300456191 /* InsetItemsGridViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		035FACE824A6488800456191 /* InsertionSortViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InsertionSortViewController.swift; sourceTree = "<group>"; };
 		035FACEB24A6EDD500456191 /* SimpleListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleListViewController.swift; sourceTree = "<group>"; };
 		035FACF024A7021300456191 /* GridViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridViewController.swift; sourceTree = "<group>"; };
+		035FACF224A70D8300456191 /* InsetItemsGridViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InsetItemsGridViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +69,7 @@
 				035FACD024A4DB4500456191 /* AppDelegate.swift */,
 				035FACD224A4DB4500456191 /* SceneDelegate.swift */,
 				035FACF024A7021300456191 /* GridViewController.swift */,
+				035FACF224A70D8300456191 /* InsetItemsGridViewController.swift */,
 				035FACEF24A6EDF200456191 /* Lists */,
 				035FACEA24A6EB8C00456191 /* Diffable */,
 				035FACD624A4DB4500456191 /* Main.storyboard */,
@@ -169,6 +172,7 @@
 				035FACE924A6488800456191 /* InsertionSortViewController.swift in Sources */,
 				035FACE724A626E500456191 /* WiFiSettingsViewController.swift in Sources */,
 				035FACEC24A6EDD500456191 /* SimpleListViewController.swift in Sources */,
+				035FACF324A70D8300456191 /* InsetItemsGridViewController.swift in Sources */,
 				035FACF124A7021300456191 /* GridViewController.swift in Sources */,
 				035FACE524A4DDA900456191 /* MountainsViewController.swift in Sources */,
 				035FACD124A4DB4500456191 /* AppDelegate.swift in Sources */,
