@@ -499,7 +499,7 @@ class MountainsViewController: UIViewController {
         navigationItem.title = "Mountains Search"
         view.backgroundColor = .systemBackground
         
-        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Two-Column Grid", style: .plain, target: self, action: #selector(pushNextPage))
+        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Distinct Sections", style: .plain, target: self, action: #selector(pushNextPage))
 
         configureView()
         configureDataSource()
@@ -507,7 +507,7 @@ class MountainsViewController: UIViewController {
     }
     
     @objc private func pushNextPage() {
-        let vc = TwoColumnViewController()
+        let vc = DistinctSectionsViewController()
         navigationController?.pushViewController(vc, animated: true)
     }
 
