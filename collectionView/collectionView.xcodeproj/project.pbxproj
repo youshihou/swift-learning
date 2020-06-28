@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0339484424A8AA6200189E54 /* NestedGroupsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0339484324A8AA6200189E54 /* NestedGroupsViewController.swift */; };
 		035FACD124A4DB4500456191 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 035FACD024A4DB4500456191 /* AppDelegate.swift */; };
 		035FACD324A4DB4500456191 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 035FACD224A4DB4500456191 /* SceneDelegate.swift */; };
 		035FACD824A4DB4500456191 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 035FACD624A4DB4500456191 /* Main.storyboard */; };
@@ -28,6 +29,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0339484324A8AA6200189E54 /* NestedGroupsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NestedGroupsViewController.swift; sourceTree = "<group>"; };
 		035FACCD24A4DB4500456191 /* collectionView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = collectionView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		035FACD024A4DB4500456191 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		035FACD224A4DB4500456191 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -61,6 +63,30 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0339484124A8AA2300189E54 /* advance */ = {
+			isa = PBXGroup;
+			children = (
+				0339484324A8AA6200189E54 /* NestedGroupsViewController.swift */,
+			);
+			name = advance;
+			sourceTree = "<group>";
+		};
+		0339484224A8AA2D00189E54 /* basic */ = {
+			isa = PBXGroup;
+			children = (
+				035FACF024A7021300456191 /* GridViewController.swift */,
+				035FACF224A70D8300456191 /* InsetItemsGridViewController.swift */,
+				035FACF424A7114B00456191 /* TwoColumnViewController.swift */,
+				035FACF624A716DF00456191 /* DistinctSectionsViewController.swift */,
+				035FACF824A71F0600456191 /* AdaptiveSectionsViewController.swift */,
+				035FACFA24A759AD00456191 /* ItemBadgeSupplementaryViewController.swift */,
+				035FACFC24A76CF700456191 /* SectionHeadersFootersViewController.swift */,
+				035FACFE24A779F900456191 /* PinnedSectionHeaderFooterViewController.swift */,
+				035FAD0024A77FD900456191 /* SectionDecorationViewController.swift */,
+			);
+			name = basic;
+			sourceTree = "<group>";
+		};
 		035FACC424A4DB4500456191 = {
 			isa = PBXGroup;
 			children = (
@@ -114,15 +140,8 @@
 		035FAD0524A7801400456191 /* Layout */ = {
 			isa = PBXGroup;
 			children = (
-				035FACF024A7021300456191 /* GridViewController.swift */,
-				035FACF224A70D8300456191 /* InsetItemsGridViewController.swift */,
-				035FACF424A7114B00456191 /* TwoColumnViewController.swift */,
-				035FACF624A716DF00456191 /* DistinctSectionsViewController.swift */,
-				035FACF824A71F0600456191 /* AdaptiveSectionsViewController.swift */,
-				035FACFA24A759AD00456191 /* ItemBadgeSupplementaryViewController.swift */,
-				035FACFC24A76CF700456191 /* SectionHeadersFootersViewController.swift */,
-				035FACFE24A779F900456191 /* PinnedSectionHeaderFooterViewController.swift */,
-				035FAD0024A77FD900456191 /* SectionDecorationViewController.swift */,
+				0339484124A8AA2300189E54 /* advance */,
+				0339484224A8AA2D00189E54 /* basic */,
 			);
 			name = Layout;
 			sourceTree = "<group>";
@@ -208,6 +227,7 @@
 				035FACF124A7021300456191 /* GridViewController.swift in Sources */,
 				035FACE524A4DDA900456191 /* MountainsViewController.swift in Sources */,
 				035FACFD24A76CF700456191 /* SectionHeadersFootersViewController.swift in Sources */,
+				0339484424A8AA6200189E54 /* NestedGroupsViewController.swift in Sources */,
 				035FACD124A4DB4500456191 /* AppDelegate.swift in Sources */,
 				035FACD324A4DB4500456191 /* SceneDelegate.swift in Sources */,
 				035FACFF24A779F900456191 /* PinnedSectionHeaderFooterViewController.swift in Sources */,
