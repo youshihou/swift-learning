@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		0339484424A8AA6200189E54 /* NestedGroupsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0339484324A8AA6200189E54 /* NestedGroupsViewController.swift */; };
 		0339484624A8AFC400189E54 /* OrthogonalScrollingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0339484524A8AFC400189E54 /* OrthogonalScrollingViewController.swift */; };
+		0339484824A8BD9A00189E54 /* OrthogonalScrollBehaviorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0339484724A8BD9A00189E54 /* OrthogonalScrollBehaviorViewController.swift */; };
 		035FACD124A4DB4500456191 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 035FACD024A4DB4500456191 /* AppDelegate.swift */; };
 		035FACD324A4DB4500456191 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 035FACD224A4DB4500456191 /* SceneDelegate.swift */; };
 		035FACD824A4DB4500456191 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 035FACD624A4DB4500456191 /* Main.storyboard */; };
@@ -32,6 +33,7 @@
 /* Begin PBXFileReference section */
 		0339484324A8AA6200189E54 /* NestedGroupsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NestedGroupsViewController.swift; sourceTree = "<group>"; };
 		0339484524A8AFC400189E54 /* OrthogonalScrollingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrthogonalScrollingViewController.swift; sourceTree = "<group>"; };
+		0339484724A8BD9A00189E54 /* OrthogonalScrollBehaviorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrthogonalScrollBehaviorViewController.swift; sourceTree = "<group>"; };
 		035FACCD24A4DB4500456191 /* collectionView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = collectionView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		035FACD024A4DB4500456191 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		035FACD224A4DB4500456191 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -70,6 +72,7 @@
 			children = (
 				0339484324A8AA6200189E54 /* NestedGroupsViewController.swift */,
 				0339484524A8AFC400189E54 /* OrthogonalScrollingViewController.swift */,
+				0339484724A8BD9A00189E54 /* OrthogonalScrollBehaviorViewController.swift */,
 			);
 			name = advance;
 			sourceTree = "<group>";
@@ -228,6 +231,7 @@
 				035FACEC24A6EDD500456191 /* SimpleListViewController.swift in Sources */,
 				0339484624A8AFC400189E54 /* OrthogonalScrollingViewController.swift in Sources */,
 				035FACF324A70D8300456191 /* InsetItemsGridViewController.swift in Sources */,
+				0339484824A8BD9A00189E54 /* OrthogonalScrollBehaviorViewController.swift in Sources */,
 				035FACF124A7021300456191 /* GridViewController.swift in Sources */,
 				035FACE524A4DDA900456191 /* MountainsViewController.swift in Sources */,
 				035FACFD24A76CF700456191 /* SectionHeadersFootersViewController.swift in Sources */,
