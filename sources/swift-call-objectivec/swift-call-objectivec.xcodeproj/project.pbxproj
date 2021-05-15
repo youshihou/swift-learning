@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		03289D8A264FFFBF00FCE070 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03289D89264FFFBF00FCE070 /* main.swift */; };
+		03289D95264FFFF600FCE070 /* OCPerson.m in Sources */ = {isa = PBXBuildFile; fileRef = 03289D94264FFFF600FCE070 /* OCPerson.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +26,9 @@
 /* Begin PBXFileReference section */
 		03289D86264FFFBF00FCE070 /* swift-call-objectivec */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "swift-call-objectivec"; sourceTree = BUILT_PRODUCTS_DIR; };
 		03289D89264FFFBF00FCE070 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		03289D92264FFFF600FCE070 /* swift-call-objectivec-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "swift-call-objectivec-Bridging-Header.h"; sourceTree = "<group>"; };
+		03289D93264FFFF600FCE070 /* OCPerson.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OCPerson.h; sourceTree = "<group>"; };
+		03289D94264FFFF600FCE070 /* OCPerson.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OCPerson.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +62,9 @@
 			isa = PBXGroup;
 			children = (
 				03289D89264FFFBF00FCE070 /* main.swift */,
+				03289D93264FFFF600FCE070 /* OCPerson.h */,
+				03289D94264FFFF600FCE070 /* OCPerson.m */,
+				03289D92264FFFF600FCE070 /* swift-call-objectivec-Bridging-Header.h */,
 			);
 			path = "swift-call-objectivec";
 			sourceTree = "<group>";
@@ -93,6 +100,7 @@
 				TargetAttributes = {
 					03289D85264FFFBF00FCE070 = {
 						CreatedOnToolsVersion = 12.5;
+						LastSwiftMigration = 1250;
 					};
 				};
 			};
@@ -119,6 +127,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				03289D95264FFFF600FCE070 /* OCPerson.m in Sources */,
 				03289D8A264FFFBF00FCE070 /* main.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -244,8 +253,16 @@
 		03289D8E264FFFBF00FCE070 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "swift-call-objectivec/swift-call-objectivec-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
@@ -253,8 +270,15 @@
 		03289D8F264FFFBF00FCE070 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "swift-call-objectivec/swift-call-objectivec-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
