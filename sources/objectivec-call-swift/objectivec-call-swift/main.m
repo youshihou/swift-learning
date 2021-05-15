@@ -6,11 +6,14 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "OCPerson.h"
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
         // insert code here...
         NSLog(@"Hello, World!");
+        
+        testSwift();
     }
     return 0;
 }
