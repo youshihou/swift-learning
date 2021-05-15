@@ -7,9 +7,10 @@
 
 import Foundation
 
-
+@objc(OCCar)
 @objcMembers class Car: NSObject {
     var price: Double
+    @objc(name)
     var band: String
     
     init(price: Double, band: String) {
@@ -17,6 +18,7 @@ import Foundation
         self.band = band
     }
     
+    @objc(drive)
     func run() {
         print(price, band, "run")
     }
@@ -27,6 +29,7 @@ import Foundation
 }
 
 extension Car {
+//    @objc(exec:v2)
     func test() {
         print(price, band, "test")
     }
