@@ -26,5 +26,6 @@ import Foundation
         perform(#selector(test2(v1:v2:)))
         perform(#selector(test2(_:_:)))
         perform(#selector(test2 as (Double, Double) -> Void))
+        
     }
 }
